@@ -1,0 +1,28 @@
+<body>
+<div class="title">
+  <h1>New game</h1>
+</div>
+  <div class="container" >
+  <% @letters.each do |letter| %>
+    <div class="letter">
+  <%=  letter %>
+    </div>
+    <%   end   %>
+    </div>
+
+<%= hidden_field_tag :letters, @letters %>
+
+    <p style= "text-align:center;">What the longest word you can do? </p>
+     <div class="solution">
+    <form action="score" method="get">
+      <input type="text" name="answer" >
+      <input type="submit" value="Play">
+
+    </form>
+  </div>
+</body>
+
+
+
+
+
